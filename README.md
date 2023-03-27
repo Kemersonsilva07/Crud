@@ -92,15 +92,12 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud
 
    10.Passo_Agora vamos fazer as codificações para o nosso Projeto
 
-
-     Controller
-
+     Controller:
      atualizarAluno.php
 
     O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
 
      Codigo:
-
      <?php
    include("../models/conexao.php");
 
@@ -109,39 +106,25 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud
    header("location:../");
    ?>
     
-   cadastroAtualoza.php 
-
+   cadastroAtualoza.php :
     Ele cadastra o usuario dentro do banco de dados 
-
-    codigo
-
+    CODIGO:
     <?php
   include("../models/conexao.php");
-
-  mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
-
+ mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
   header("location:../");
   ?>
-
-  deletarAluno.php
-
+  deletarAluno.php:
    Ele deleta a seu cadastro dentro do banco
-  
+   CODIGO:
     <?php
     include("../models/conexao.php");
-
     mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
-
     header("location:../");
     ?>
-
-
-   funcoes.php
-
+   funcoes.php:
    A função serve para fazer as buscas entre as pastas 
-
-   Codigo:
-
+   CODIGO:
    <?php
 function mostrarDados()
 {
@@ -150,9 +133,7 @@ function mostrarDados()
         echo "Nenhum resultado";
     } else {
         $varBusca = $_POST["buscar"];
-
         echo "<table class='table table-bordered table-striped table-hover' border='1' width='450'><tr><td>Frase</td><td>Editar</td><td>Excluir</td></tr>";
-
         $query = mysqli_query($conexao, "SELECT * FROM alunos WHERE nome LIKE '%$varBusca%'");
         while ($exibe = mysqli_fetch_array($query)) {
             $varSexo = ($exibe[3] == "m") ? "o" : "a";
@@ -165,43 +146,29 @@ function mostrarDados()
 
         echo "</table>";
     }
-
 }
 ?>
-
-
-    Models
-
+    Models:
     conexao.php
-
      Como o nome já diz, ela é a conexão entre o banco de dados e o seu projeto;
     O codigo connect é o numero do seu Xampp
-
-     codigo:
-
+     CODIGO:
      <?php
 $conexao = mysqli_connect("127.0.0.1","root","");
            mysqli_select_db($conexao,"escola");
            mysqli_set_charset($conexao,"UTF8");
  ?>
-
-
-     views 
-
+     views:
      Blades
-
      footer.php
      Ele é onde fecha o seu codigo
-
- codigo:
+  CODIGO:
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
-
   header.php
  Blades é onde fica o seu cabeçalho
- 
- codigo:
+ CODIGO:
     <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -212,14 +179,11 @@ $conexao = mysqli_connect("127.0.0.1","root","");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body class="bg-secondary">
-   
      Fora do blades 
-
      cadastro.php
      Ela contem bootstrap e onde aparce o seu design do cadastro
-
-     codigo:
-   
+     CODIGO:
+ 
     <?php include("blades/header.php") ?>
 
 <div class="container border rounded mt-5 bg-white shadow">
@@ -282,10 +246,9 @@ $conexao = mysqli_connect("127.0.0.1","root","");
     <?php } ?>
 
 <?php include("blades/footer.php") ?>
-
-    
+ 
     Agora fora das pasta fica o arquivo Index.php é a estrura do nosso projeto
-
+ 
     index.php
 
     codigo:
