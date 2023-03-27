@@ -1,5 +1,3 @@
-# Crud
-Aprenda os passo a passos para criar o seu primeiro banco Crud
 
 # Crud
 Aprenda os passo a passo para criar o seu primeiro banco Crud
@@ -18,26 +16,25 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud
       1.Passo_Primeiro instale o aplicativo workbench(ele é onde vc pode insirir seus dados no banco)ele estara no link a seguir:
       https://www.mysql.com/products/workbench/
       
-      ![Work](https://user-images.githubusercontent.com/128431256/228087865-71da7815-69e4-4b04-8054-ea3f4d40c2bf.png)
+     ![Work](https://user-images.githubusercontent.com/128431256/228088301-9e7ec271-cbe3-4350-b4a9-7323b49f5acf.png)
+
 
       2.Passo_instale o aplicativo xampp:
       https://www.apachefriends.org/pt_br/download.html
 
-      ![xampp](https://user-images.githubusercontent.com/128431256/228087935-b790b7fb-b3a9-40e8-8991-3829136269fb.png)
+      
  
       3.Passo_instale o aplicativo Visual Code(Ele é usado para a criação do codigo):
       https://code.visualstudio.com/
       
-      ![Visual](https://user-images.githubusercontent.com/128431256/228087969-902ab6d7-befc-4a08-9891-9f5dd7a404c6.png)
+     
 
  
      4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples):
       https://getbootstrap.com/
       
       
-      ![Boot](https://user-images.githubusercontent.com/128431256/228088043-11504bce-aa6d-463d-b50c-a9e47aee32fe.png)
-
-
+      
       Após a instalação dos aplicativos necessarios para a criação do seu projeto,vou explicar os passos e as codificações necessarias para a criação do bancoCrud
     
      5.Passo_ligar o xampp(Mysqli,apache)
