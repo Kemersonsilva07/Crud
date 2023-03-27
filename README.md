@@ -1,36 +1,41 @@
 
 # Crud
 Aprenda os passo a passo para criar o seu primeiro banco Crud:
-     Olá, hoje vou mostrar para vcs como criar o seu primeiro Banco Crud no visual code
+
+ Olá, hoje vou mostrar para vcs como criar o seu primeiro Banco Crud no visual code
      Entretanto vou explicar a você o que é Crud:
- .
-     Primeiramente, CRUD é o acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar). Com essa explicação, já dá para intuir que o CRUD é uma sequência de funções de um sistema que trabalha com banco de dados, seja ele na sua máquina ou na nuvem.
-     Agora q você já tem uma ideia do q seja o crud,vamos mostrar como seria os passo a passo da criação do seu primeiro crud
-      Antes de começar faça as seguintes instalações:
+
+ Primeiramente, CRUD é o acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar). Com essa explicação, já dá para intuir que o CRUD é uma sequência de funções de um sistema que trabalha com banco de dados, seja ele na sua máquina ou na nuvem.
+   
+   Agora q você já tem uma ideia do q seja o crud,vamos mostrar como seria os passo a passo da criação do seu primeiro crud
+   
+   Antes de começar faça as seguintes instalações:
   
   1.Passo_Primeiro instale o aplicativo workbench(ele é onde vc pode insirir seus dados no banco)ele estara no link a seguir:
      < https://www.mysql.com/products/workbench/>  
- .
        ![work](https://user-images.githubusercontent.com/128431256/228089834-47849141-6f5c-4a9a-a337-790a592980a4.png)
- .
-      2.Passo_instale o aplicativo xampp:
+ 
+ 
+   2.Passo_instale o aplicativo xampp:
         <https://www.apachefriends.org/pt_br/download.html>
-.
 ![Captura de tela 2023-03-27 203437](https://user-images.githubusercontent.com/128431256/228090208-646ab456-2128-4162-8ecd-f14829c6bfcf.png)
-     < https://code.visualstudio.com/>
-         ![Visual](https://user-images.githubusercontent.com/128431256/228089947-1202e57c-87a4-4500-8f21-0a9e8350e883.png)
+
+ 3.Passo_instale o aplicativo Visual Code(Ele é usado para a criação do codigo):
+      https://code.visualstudio.com/
+    
+   ![Visual](https://user-images.githubusercontent.com/128431256/228089947-1202e57c-87a4-4500-8f21-0a9e8350e883.png)
 
    4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples):
      <https://getbootstrap.com/>
         ![boot](https://user-images.githubusercontent.com/128431256/228089994-654df66a-beb0-4bde-9413-01f7527edbb1.png);
 	
 Após a instalação dos aplicativos necessarios para a criação do seu projeto,vou explicar os passos e as codificações necessarias para a criação do bancoCrud
-.
-     5.Passo_ligar o xampp(Mysqli,apache)
-.
-     6.Passo_criar no workbench um banco com as seguintes informações 
-.
-     CREATE DATABASE  escola;
+
+   5.Passo_ligar o xampp(Mysqli,apache)
+
+   6.Passo_criar no workbench um banco com as seguintes informações 
+
+   CREATE DATABASE  escola;
     use escola
  CREATE TABLE  alunos(
    codigo int(11) NOT NULL AUTO_INCREMENT,
@@ -39,11 +44,14 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
    sexo varchar(1) DEFAULT NULL,
    PRIMARY KEY (`codigo`)
   )  ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-  7.Passo_Criar uma pasta com o nome BancoCrud
-  8.Passo_Entrar no Visual Code e usar a pasta BancoCrud
+
+7.Passo_Criar uma pasta com o nome BancoCrud
+
+8.Passo_Entrar no Visual Code e usar a pasta BancoCrud
    Agora para a criacão das pasta aperte em new folder e para a criação dos arquivos New File
     Apóes ter feito os passos necessarios para chegar até aqui,você terá que fazer os seguintes passos:
-   9.Passo_Crie as pastas com os seguintes nomes:
+ 
+ 9.Passo_Crie as pastas com os seguintes nomes:
    .Controller
    .Models
    .Views
@@ -54,21 +62,29 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
    .cadastrarAluno.php
    .deletarAluno.php
    .funcoes.php
-    Dentroda pasta model ficará as Conexão do banco
+ 
+ Dentro da pasta model ficará as Conexão do banco
     .Conexao.php
-    Agora dentro da Views criar uma pasta blades e criar um arquivo com os nomes
+  
+  Agora dentro da Views criar uma pasta blades e criar um arquivo com os nomes
     .cadastro.php
     .cadastroAtualiza.php
-    agora dentro da pasta blades
+   
+   agora dentro da pasta blades
    .footer.php
    .header.php
-     A pasta index.php ficara fora de todos as pastas 
+
+A pasta index.php ficara fora de todos as pastas 
 
    10.Passo_Agora vamos fazer as codificações para o nosso Projeto
-     Controller:
-     atualizarAluno.php
-    O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
-     Codigo:
+ 
+ Controller:
+ 
+ atualizarAluno.php
+
+O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
+   
+   CODIGO:
      <?php
    include("../models/conexao.php");
    mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
@@ -76,25 +92,33 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
    header("location:../");
    ?>
   
-   cadastroAtualoza.php :
-    Ele cadastra o usuario dentro do banco de dados 
-    CODIGO:
+  cadastroAtualoza.php :
+   
+   Ele cadastra o usuario dentro do banco de dados 
+   
+   CODIGO:
     <?php
   include("../models/conexao.php");
  mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
   header("location:../");
   ?>
-  deletarAluno.php:
-   Ele deleta a seu cadastro dentro do banco
-   CODIGO:
+ 
+ deletarAluno.php:
+ 
+ Ele deleta a seu cadastro dentro do banco
+
+CODIGO:
     <?php
     include("../models/conexao.php");
     mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
     header("location:../");
     ?>
-   funcoes.php:
-   A função serve para fazer as buscas entre as pastas 
-   CODIGO:
+
+funcoes.php:
+  
+  A função serve para fazer as buscas entre as pastas 
+ 
+ CODIGO:
    <?php
 function mostrarDados()
 {
@@ -118,27 +142,35 @@ function mostrarDados()
     }
 }
 ?>
-    Models:
-    conexao.php
-     Como o nome já diz, ela é a conexão entre o banco de dados e o seu projeto;
-    O codigo connect é o numero do seu Xampp
-     CODIGO:
+  
+  Models:
+  
+  conexao.php
+   Como o nome já diz, ela é a conexão entre o banco de dados e o seu projeto;
+   O codigo connect é o numero do seu Xampp
+    
+   CODIGO:
      <?php
 $conexao = mysqli_connect("127.0.0.1","root","");
            mysqli_select_db($conexao,"escola");
            mysqli_set_charset($conexao,"UTF8");
  ?>
-     views:
+  
+  Views:
      Blades
-     footer.php
+  
+  footer.php
      Ele é onde fecha o seu codigo
-  CODIGO:
+ 
+ CODIGO:
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
   header.php
- Blades é onde fica o seu cabeçalho
- CODIGO:
+
+header é onde fica o seu cabeçalho
+
+CODIGO:
     <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -149,10 +181,13 @@ $conexao = mysqli_connect("127.0.0.1","root","");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body class="bg-secondary">
-     Fora do blades 
-     cadastro.php
+    
+	Fora do blades 
+    
+	cadastro.php
      Ela contem bootstrap e onde aparce o seu design do cadastro
-     CODIGO:
+   
+	CODIGO:
  
     <?php include("blades/header.php") ?>
 
@@ -235,3 +270,6 @@ $conexao = mysqli_connect("127.0.0.1","root","");
     
 </body>
 </html>
+	
+	
+	Agora q seu projeto esta pronto vamos testar.Para isso você ira na sua plataforma de pesquisar e ira digitar localhost
