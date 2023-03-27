@@ -12,7 +12,7 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud
       2.Passo_instale o aplicativo xampp:
         <https://www.apachefriends.org/pt_br/download.html>
          ![xampp](https://user-images.githubusercontent.com/128431256/228089898-30fc21f5-893f-485c-88c2-99d16f870cdd.png)
-      3.Passo_instale o aplicativo Visual Code(Ele é usado para a criação do codigo):
+![Captura de tela 2023-03-27 203437](https://user-images.githubusercontent.com/128431256/228090208-646ab456-2128-4162-8ecd-f14829c6bfcf.png)
      < https://code.visualstudio.com/>
          ![Visual](https://user-images.githubusercontent.com/128431256/228089947-1202e57c-87a4-4500-8f21-0a9e8350e883.png)
      4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples):
