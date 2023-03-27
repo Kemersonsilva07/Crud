@@ -171,7 +171,8 @@ $conexao = mysqli_connect("127.0.0.1","root","");
 header é onde fica o seu cabeçalho
 
 CODIGO:
-    <!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -182,7 +183,7 @@ CODIGO:
 </head>
 <body class="bg-secondary">
     
-	Fora do blades 
+Fora do blades 
     
 	cadastro.php
      Ela contem bootstrap e onde aparce o seu design do cadastro
