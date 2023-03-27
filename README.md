@@ -1,52 +1,28 @@
 
 # Crud
 Aprenda os passo a passo para criar o seu primeiro banco Crud
- 
-
      Olá, hoje vou mostrar para vcs como criar o seu primeiro Banco Crud no visual code.
      Entretanto vou explicar a você o que é Crud
-
      Primeiramente, CRUD é o acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar). Com essa explicação, já dá para intuir que o CRUD é uma sequência de funções de um sistema que trabalha com banco de dados, seja ele na sua máquina ou na nuvem.
-
-      Agora q você já tem uma ideia do q seja o crud,vamos mostrar como seria os passo a passo da criação do seu primeiro crud
-       
-
+     Agora q você já tem uma ideia do q seja o crud,vamos mostrar como seria os passo a passo da criação do seu primeiro crud
       Antes de começar faça as seguintes instalações:
-
       1.Passo_Primeiro instale o aplicativo workbench(ele é onde vc pode insirir seus dados no banco)ele estara no link a seguir:
-      https://www.mysql.com/products/workbench/
-      
-      
+     < https://www.mysql.com/products/workbench/>
      ![Work](https://user-images.githubusercontent.com/128431256/228088301-9e7ec271-cbe3-4350-b4a9-7323b49f5acf.png)
-
-
-
       2.Passo_instale o aplicativo xampp:
-      https://www.apachefriends.org/pt_br/download.html
-
-      
- 
+      <https://www.apachefriends.org/pt_br/download.html>
+     ![xampp](https://user-images.githubusercontent.com/128431256/228089135-a2faf98f-aa88-4135-9af5-f34a7342e070.png)
       3.Passo_instale o aplicativo Visual Code(Ele é usado para a criação do codigo):
-      https://code.visualstudio.com/
-      
-     
-
- 
+     < https://code.visualstudio.com/>
+      ![Visual](https://user-images.githubusercontent.com/128431256/228089212-f3ad2227-78aa-460b-8efc-815534dcb924.png)
      4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples):
-      https://getbootstrap.com/
-      
-      
-      
+      <https://getbootstrap.com/>
+      ![Boot](https://user-images.githubusercontent.com/128431256/228089251-5b48d3f6-ac66-4029-99b1-de3b1ef0159c.png)
       Após a instalação dos aplicativos necessarios para a criação do seu projeto,vou explicar os passos e as codificações necessarias para a criação do bancoCrud
-    
      5.Passo_ligar o xampp(Mysqli,apache)
-
-
-     6.Passo_criar no workbench um banco com as seguintes informações :
-
+     6.Passo_criar no workbench um banco com as seguintes informações 
      CREATE DATABASE  escola;
     use escola;
-
    CREATE TABLE  alunos(
    codigo int(11) NOT NULL AUTO_INCREMENT,
    nome varchar(250) DEFAULT NULL,
@@ -54,17 +30,11 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud
    sexo varchar(1) DEFAULT NULL,
    PRIMARY KEY (`codigo`)
   )  ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
   7.Passo_Criar uma pasta com o nome BancoCrud
-
   8.Passo_Entrar no Visual Code e usar a pasta BancoCrud
-
    Agora para a criacão das pasta aperte em new folder e para a criação dos arquivos New File
-
     Apóes ter feito os passos necessarios para chegar até aqui,você terá que fazer os seguintes passos:
-   
    9.Passo_Crie as pastas com os seguintes nomes:
-
    .Controller
    .Models
    .Views
@@ -75,37 +45,28 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud
    .cadastrarAluno.php
    .deletarAluno.php
    .funcoes.php
-
-    Dentro da pasta model ficará as Conexão do banco
+    Dentroda pasta model ficará as Conexão do banco
     .Conexao.php
-
     Agora dentro da Views criar uma pasta blades e criar um arquivo com os nomes
     .cadastro.php
     .cadastroAtualiza.php
-
     agora dentro da pasta blades
    .footer.php
    .header.php
-
      A pasta index.php ficara fora de todos as pastas 
 
-
    10.Passo_Agora vamos fazer as codificações para o nosso Projeto
-
      Controller:
      atualizarAluno.php
-
     O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
-
      Codigo:
      <?php
    include("../models/conexao.php");
-
    mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
 
    header("location:../");
    ?>
-    
+  
    cadastroAtualoza.php :
     Ele cadastra o usuario dentro do banco de dados 
     CODIGO:
