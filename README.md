@@ -8,15 +8,19 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud
       Antes de começar faça as seguintes instalações:
       1.Passo_Primeiro instale o aplicativo workbench(ele é onde vc pode insirir seus dados no banco)ele estara no link a seguir:
      < https://www.mysql.com/products/workbench/>
-        ![work](https://user-images.githubusercontent.com/128431256/228089834-47849141-6f5c-4a9a-a337-790a592980a4.png)
+       
+       ![work](https://user-images.githubusercontent.com/128431256/228089834-47849141-6f5c-4a9a-a337-790a592980a4.png)
+        
       2.Passo_instale o aplicativo xampp:
         <https://www.apachefriends.org/pt_br/download.html>
          
 ![Captura de tela 2023-03-27 203437](https://user-images.githubusercontent.com/128431256/228090208-646ab456-2128-4162-8ecd-f14829c6bfcf.png)
      < https://code.visualstudio.com/>
          ![Visual](https://user-images.githubusercontent.com/128431256/228089947-1202e57c-87a4-4500-8f21-0a9e8350e883.png)
-     4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples):
-      <https://getbootstrap.com/>
+   
+   4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples):
+     
+     <https://getbootstrap.com/>
         ![boot](https://user-images.githubusercontent.com/128431256/228089994-654df66a-beb0-4bde-9413-01f7527edbb1.png)
       Após a instalação dos aplicativos necessarios para a criação do seu projeto,vou explicar os passos e as codificações necessarias para a criação do bancoCrud
      5.Passo_ligar o xampp(Mysqli,apache)
