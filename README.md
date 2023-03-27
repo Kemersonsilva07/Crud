@@ -12,6 +12,7 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud:
      < https://www.mysql.com/products/workbench/>  
  .
        ![work](https://user-images.githubusercontent.com/128431256/228089834-47849141-6f5c-4a9a-a337-790a592980a4.png)
+ .
       2.Passo_instale o aplicativo xampp:
         <https://www.apachefriends.org/pt_br/download.html>
 .
