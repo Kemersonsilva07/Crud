@@ -181,7 +181,7 @@ CODIGO:
 
 cadastroAtualiza.php
 
-Ela aparece contendo os design do seu AtulaizarAluno
+Ela aparece contendo os design do seu AtualizarAluno
 
 codigo:
 
