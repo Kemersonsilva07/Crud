@@ -112,62 +112,25 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
   
   CODIGO:
 
-<?php
-  
-include("../models/conexao.php"); mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
-header("location:../");
-?>
- 
+![image](https://user-images.githubusercontent.com/128431256/228099485-cb54965a-812c-435b-8fa7-108272623082.png)
+
 deletarAluno.php: 
 
 Ele deleta a seu cadastro dentro do banco
 
 CODIGO:
-   <?php
-   include("../models/conexao.php");
-   mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
-   header("location:../");
-  ?>
+ 
+ ![Delet](https://user-images.githubusercontent.com/128431256/228099578-26dc5c39-11ee-49fd-ad81-00bc3737c0f9.png)
+
 
 funcoes.php:
 
 A função serve para fazer as buscas entre as pastas 
 
 CODIGO:
- <?php
-function mostrarDados()
-{
-  include("models/conexao.php");
-    if (empty($_POST["buscar"])) {
-	echo "Nenhum resultado";
-    
-} else {
 
-	$varBusca = $_POST["buscar"];
-        
-echo "<table class='table table-bordered table-striped table-hover' border='1' width='450'><tr><td>Frase</td><td>Editar</td><td>Excluir</td></tr>";
+![func](https://user-images.githubusercontent.com/128431256/228099682-ffcb735f-7a14-4da4-9c6c-05344becec93.png)
 
-	$query = mysqli_query($conexao, "SELECT * FROM alunos WHERE nome LIKE '%$varBusca%'");
-        
-while ($exibe = mysqli_fetch_array($query)) {
-
-	    $varSexo = ($exibe[3] == "m") ? "o" : "a";
-            
-echo "<tr>" .
-
-		"<td>" . strtoupper($varSexo) . " alun$varSexo <b>" . $exibe[1] . "</b> mora na cidade de " . $exibe[2] . ".</td>" .
-                
-"<td><a href='views/cadastroAtualiza.php?ida=" . $exibe[0] . "'><buttom type='button' class='btn btn-secondary'>Editar</button></a></td>" .
-
-		"<td><a href='controllers/deletarAluno.php?ida=" . $exibe[0] . "'><button type='button' class='btn btn-danger'>Excluir</button></a></td>" .
-                
-"</tr>";
-        }
-
-        echo "</table>";
-    }
-}
-?>
   
   Models:
   
