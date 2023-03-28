@@ -40,16 +40,8 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
 
 
    6.Passo_criar no workbench um banco com as seguintes informações 
-
-   CREATE DATABASE  escola;
-    use escola
- CREATE TABLE  alunos(
-   codigo int(11) NOT NULL AUTO_INCREMENT,
-   nome varchar(250) DEFAULT NULL,
-   cidade varchar(250) DEFAULT NULL,
-   sexo varchar(1) DEFAULT NULL,
-   PRIMARY KEY (`codigo`)
-  )  ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+   
+![banco](https://user-images.githubusercontent.com/128431256/228102836-9c0d1f4e-0be6-49fb-88f6-268ce1bf4e91.png)
 
 7.Passo_Criar uma pasta com o nome BancoCrud
 
