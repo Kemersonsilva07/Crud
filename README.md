@@ -156,109 +156,36 @@ CODIGO:
 
 header é onde fica o seu cabeçalho
 
-CODIGO:
-  <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP - Revisão</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body class="bg-secondary">
-    
+![heaa](https://user-images.githubusercontent.com/128431256/228100290-b0ed8cd3-9c69-46e2-be4f-f210b8979b67.png)
+
+
 Fora do blades 
     
 cadastro.php	
 Ela contem bootstrap e onde aparce o seu design do cadastro 
+
 CODIGO:
-  <?php include("blades/header.php") ?>
 
-<div class="container border rounded mt-5 bg-white shadow">
-    <form action="../controllers/cadastrarAluno.php" method="post">
-        <div class="row">
-            <div class="col">
-        <label class="form-label">Nome</label>
-		    
-        <input class="form-control" type="text" name="alunoNome"><br>
-</diV>
-        <div class="col">
-        <label class="form-label">Cidade</label>
-		
-        <input class="form-control" type="text" name="alunoCidade"><br>
-</div>
-</div>
-       <input class="form-check-input"type="radio" value="m" name="alunoSexo">
-	    
-        <label class="radio-inline"> Masculino </label><br>
-        
-	 <input class="form-check-input" type="radio" value="f" name="alunoSexo">
-        
-	    <label class="radio-inline"> Feminino </label><br>
-        
-	    <input class="mt-2 mb-3 btn btn-success" type="submit" value="Cadastrar">
-  </form>
-</div>
+![cadas](https://user-images.githubusercontent.com/128431256/228100390-92952390-28f2-46d7-907b-28f45846a95d.png)
 
-<?php include("blades/footer.php") ?>
 
 cadastroAtualiza.php
 
 Ela aparece contendo os design do seu AtulaizarAluno
 
 codigo:
-<?php include("../models/conexao.php") ?>
-<?php include("blades/header.php") ?>
 
-    <?php
-    $varIda = $_GET["ida"];
-    $query = mysqli_query($conexao,"SELECT * FROM alunos WHERE codigo = $varIda");
-    while($exibe = mysqli_fetch_array($query)){
-    ?>
-    <div class="container border rounded mt-5 bg-white shadow">
-    <form action="../controllers/atualizarAluno.php" method="post">
-        <input type="hidden" name="alunoCodigo" value="<?php echo $exibe[0] ?>">
-        
-        <div class="row my-3">
-            <div class="col">
-        <label class="form-label">Nome</label>
-        <input class="form-control" type="text" name="alunoNome" value="<?php echo $exibe[1] ?>"><br>
-        </div>
-        <div class="col">
-        <label class="form-label">Cidade</label>
-        <input class="form-control" type="text" name="alunoCidade" value="<?php echo $exibe[2] ?>"><br>
-    </div>
-    </div>
+![tuas](https://user-images.githubusercontent.com/128431256/228100482-beb39a0f-2247-40e3-8696-2fb4f4a41f32.png)
+
+
+   Agora fora das pasta fica o arquivo Index.php é a estrura do nosso projeto
  
-        Masculino <input type="radio" value="m" name="alunoSexo" <?php echo ($exibe[3]=="m")?"checked":""?>><br>
-        Feminino  <input type="radio" value="f" name="alunoSexo" <?php echo ($exibe[3]=="f")?"checked":""?>><br>
-        
-        <input class="mt-2 mb-3 btn btn-success" type="submit" value="Atualizar">
-    </form>
-    </div>
-    <?php } ?>
+   index.php
 
-<?php include("blades/footer.php") ?>
- 
-    Agora fora das pasta fica o arquivo Index.php é a estrura do nosso projeto
- 
-    index.php
+   CODIGO:
 
-    CODIGO:
+![ind](https://user-images.githubusercontent.com/128431256/228100545-10d6c4d2-0478-42a7-9a55-9d6cd00a47a8.png)
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
 	
 	
-	Agora q seu projeto esta pronto vamos testar.Para isso você ira na sua plataforma de pesquisar e ira digitar localhost
+Agora q seu projeto esta pronto vamos testar.Para isso você ira na sua plataforma de pesquisar e ira digitar localhost
