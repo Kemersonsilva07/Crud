@@ -142,6 +142,7 @@ CODIGO:
   Models:
   
   conexao.php
+  
    Como o nome já diz, ela é a conexão entre o banco de dados e o seu projeto;
    O codigo connect é o numero do seu Xampp
     
@@ -204,8 +205,9 @@ Agora q seu projeto esta pronto vamos testar.Para isso você ira na sua platafor
    
    ![Captura de tela 2023-03-27 221250](https://user-images.githubusercontent.com/128431256/228101261-e4515da0-06d4-412e-bd4c-f2f7e4605632.png)
    
-   Parábens você fez o seu primeiro Banco Crud.
-   E seu banco ficará assim
+   Parábens você fez o seu primeiro Banco Crud!!!
+   
+   Agora vou mostrar vou mostrar o resultado do seu trablho
    
    ![FIAN](https://user-images.githubusercontent.com/128431256/228101319-8715ff01-cc8c-4f76-99ac-6515f5734528.png)
 
