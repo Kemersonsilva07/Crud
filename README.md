@@ -202,6 +202,7 @@ CODIGO:
 </diV>
         <div class="col">
         <label class="form-label">Cidade</label>
+		
         <input class="form-control" type="text" name="alunoCidade"><br>
 </div>
 </div>
