@@ -51,8 +51,10 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
 7.Passo_Criar uma pasta com o nome BancoCrud
 
 8.Passo_Entrar no Visual Code e usar a pasta BancoCrud
+   
    Agora para a criacão das pasta aperte em new folder e para a criação dos arquivos New File
-    Apóes ter feito os passos necessarios para chegar até aqui,você terá que fazer os seguintes passos:
+    
+   Após ter feito os passos necessarios para chegar até aqui,você terá que fazer os seguintes passos:
  
  9.Passo_Crie as pastas com os seguintes nomes:
    .Controller
