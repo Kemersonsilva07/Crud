@@ -139,12 +139,10 @@ CODIGO:
    O codigo connect é o numero do seu Xampp
     
    CODIGO:
-     <?php
-$conexao = mysqli_connect("127.0.0.1","root","");
-           mysqli_select_db($conexao,"escola");
-           mysqli_set_charset($conexao,"UTF8");
- ?>
-  
+
+![model](https://user-images.githubusercontent.com/128431256/228099816-aa4f185b-2016-48c6-88bf-3d58f5b18c55.png)
+
+
   Views:
   
    Blades
@@ -152,10 +150,9 @@ $conexao = mysqli_connect("127.0.0.1","root","");
   footer.php
      Ele é onde fecha o seu codigo
  CODIGO:
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
-</html>
-  header.php
+
+![foot](https://user-images.githubusercontent.com/128431256/228100090-866f8c70-4ec1-45be-86c5-cdccef1edb43.png)
+
 
 header é onde fica o seu cabeçalho
 
