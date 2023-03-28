@@ -186,6 +186,7 @@ CODIGO:
 Fora do blades 
     
 cadastro.php	
+
 Ela contem bootstrap e onde aparce o seu design do cadastro
    
 CODIGO:
@@ -204,11 +205,15 @@ CODIGO:
         <input class="form-control" type="text" name="alunoCidade"><br>
 </div>
 </div>
-        <input class="form-check-input"type="radio" value="m" name="alunoSexo">
+       <input class="form-check-input"type="radio" value="m" name="alunoSexo">
+	    
         <label class="radio-inline"> Masculino </label><br>
-        <input class="form-check-input" type="radio" value="f" name="alunoSexo">
-        <label class="radio-inline"> Feminino </label><br>
-        <input class="mt-2 mb-3 btn btn-success" type="submit" value="Cadastrar">
+        
+	 <input class="form-check-input" type="radio" value="f" name="alunoSexo">
+        
+	    <label class="radio-inline"> Feminino </label><br>
+        
+	    <input class="mt-2 mb-3 btn btn-success" type="submit" value="Cadastrar">
   </form>
 </div>
 
