@@ -101,7 +101,8 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
  
  atualizarAluno.php
 O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
-   CODIGO:
+   
+  CODIGO:
 
 ![image](https://user-images.githubusercontent.com/128431256/228099127-14a5a06e-dfc0-4574-936f-908c25863deb.png)
   
