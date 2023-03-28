@@ -102,13 +102,8 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
  atualizarAluno.php
 O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
    CODIGO:
-   
-  <?php
-  
-  include("../models/conexao.php");
-  mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
-   header("location:../"); 
-  ?>
+
+![image](https://user-images.githubusercontent.com/128431256/228099127-14a5a06e-dfc0-4574-936f-908c25863deb.png)
   
   cadastroAtualoza.php :  
   
