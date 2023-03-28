@@ -185,12 +185,12 @@ CODIGO:
     
 Fora do blades 
     
-	cadastro.php
-     Ela contem bootstrap e onde aparce o seu design do cadastro
+cadastro.php	
+Ela contem bootstrap e onde aparce o seu design do cadastro
    
-	CODIGO:
+CODIGO:
  
-    <?php include("blades/header.php") ?>
+ <?php include("blades/header.php") ?>
 
 <div class="container border rounded mt-5 bg-white shadow">
     <form action="../controllers/cadastrarAluno.php" method="post">
@@ -209,18 +209,18 @@ Fora do blades
         <input class="form-check-input" type="radio" value="f" name="alunoSexo">
         <label class="radio-inline"> Feminino </label><br>
         <input class="mt-2 mb-3 btn btn-success" type="submit" value="Cadastrar">
-    </form>
+  </form>
 </div>
 
 <?php include("blades/footer.php") ?>
 
-   cadastroAtualiza.php
+cadastroAtualiza.php
 
-    Ela aparece contendo os design do seu AtulaizarAluno
+Ela aparece contendo os design do seu AtulaizarAluno
 
-    codigo:
+codigo:
 
-    <?php include("../models/conexao.php") ?>
+ <?php include("../models/conexao.php") ?>
 <?php include("blades/header.php") ?>
 
     <?php
