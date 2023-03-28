@@ -109,7 +109,7 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
    
  include("../models/conexao.php");
  
-  mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
+ mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
   
  header("location:../");
  
@@ -120,15 +120,11 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
   Ele cadastra o usuario dentro do banco de dados 
    
    CODIGO:
-
 <?php
   
 include("../models/conexao.php");
-
  mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
- 
  header("location:../");
- 
  ?>
  
  deletarAluno.php:
