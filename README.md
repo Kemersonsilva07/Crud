@@ -2,7 +2,7 @@
 # Crud
 Aprenda os passo a passo para criar o seu primeiro banco Crud:
 
- Olá, hoje vou mostrar para vcs como criar o seu primeiro Banco Crud no visual code
+ Olá, hoje vou mostrar para vocês como criar o seu primeiro Banco Crud no visual code
      Entretanto vou explicar a você o que é Crud:
 
  Primeiramente, CRUD é o acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar). Com essa explicação, já dá para intuir que o CRUD é uma sequência de funções de um sistema que trabalha com banco de dados, seja ele na sua máquina ou na nuvem.
@@ -11,7 +11,7 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud:
    
    Antes de começar faça as seguintes instalações:
   
-  1.Passo_Primeiro instale o aplicativo workbench(ele é onde vc pode insirir seus dados no banco)ele estara no link a seguir:
+  1.Passo_Primeiro instale o aplicativo workbench(ele é onde você pode insirir seus dados no banco)ele estara no link a seguir:
      < https://www.mysql.com/products/workbench/>  
       
    ![work](https://user-images.githubusercontent.com/128431256/228089834-47849141-6f5c-4a9a-a337-790a592980a4.png)
@@ -36,6 +36,9 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
 
    5.Passo_ligar o xampp(Mysqli,apache)
 
+![xamppp](https://user-images.githubusercontent.com/128431256/228101411-a3199d0e-037e-4f42-b58d-9eb25d196d86.png)
+
+
    6.Passo_criar no workbench um banco com as seguintes informações 
 
    CREATE DATABASE  escola;
@@ -53,6 +56,9 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
 8.Passo_Entrar no Visual Code e usar a pasta BancoCrud
    
    Agora para a criacão das pasta aperte em new folder e para a criação dos arquivos New File
+
+![nnn,](https://user-images.githubusercontent.com/128431256/228101856-3bbd67a4-f577-49d2-86e2-a77215481f1f.png)
+
     
    Após ter feito os passos necessarios para chegar até aqui,você terá que fazer os seguintes passos:
  
