@@ -102,12 +102,9 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
  atualizarAluno.php
 
 O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
-   
    CODIGO:
-  
   <?php
-   
- include("../models/conexao.php");
+    include("../models/conexao.php");
   mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
    header("location:../"); 
   ?>
@@ -115,8 +112,7 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
   cadastroAtualoza.php :  
   
   Ele cadastra o usuario dentro do banco de dados 
-   
-   CODIGO:
+    CODIGO:
 <?php
   include("../models/conexao.php"); mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
 header("location:../");
@@ -125,9 +121,7 @@ header("location:../");
  deletarAluno.php:
  
  Ele deleta a seu cadastro dentro do banco
-
 CODIGO:
-   
    <?php
    include("../models/conexao.php");
    mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
@@ -135,11 +129,9 @@ CODIGO:
   ?>
 
 funcoes.php:
-  
-  A função serve para fazer as buscas entre as pastas 
+    A função serve para fazer as buscas entre as pastas 
  
  CODIGO:
- 
  <?php
 function mostrarDados()
 {
@@ -204,8 +196,7 @@ $conexao = mysqli_connect("127.0.0.1","root","");
 header é onde fica o seu cabeçalho
 
 CODIGO:
-
-   <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -223,8 +214,7 @@ cadastro.php
 Ela contem bootstrap e onde aparce o seu design do cadastro
    
 CODIGO:
- 
- <?php include("blades/header.php") ?>
+  <?php include("blades/header.php") ?>
 
 <div class="container border rounded mt-5 bg-white shadow">
     <form action="../controllers/cadastrarAluno.php" method="post">
@@ -259,8 +249,7 @@ cadastroAtualiza.php
 Ela aparece contendo os design do seu AtulaizarAluno
 
 codigo:
-
- <?php include("../models/conexao.php") ?>
+<?php include("../models/conexao.php") ?>
 <?php include("blades/header.php") ?>
 
     <?php
