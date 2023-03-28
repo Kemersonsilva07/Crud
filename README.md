@@ -57,29 +57,43 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
    Após ter feito os passos necessarios para chegar até aqui,você terá que fazer os seguintes passos:
  
  9.Passo_Crie as pastas com os seguintes nomes:
-   .Controller
-   .Models
-   .Views
-   .Index.php
+ 
+   
+ .Controller
+   
+ .Models
+   
+ .Views
+   
+ .Index.php
    
    Dentro da Pasta views tera os seguintes arquivos 
+   
    .atualizarAluno.php
+   
    .cadastrarAluno.php
+   
    .deletarAluno.php
+   
    .funcoes.php
  
  Dentro da pasta model ficará as Conexão do banco
-    .Conexao.php
+ 
+  .Conexao.php
   
   Agora dentro da Views criar uma pasta blades e criar um arquivo com os nomes
-    .cadastro.php
-    .cadastroAtualiza.php
+  
+  .cadastro.php
+ 
+  .cadastroAtualiza.php
    
    agora dentro da pasta blades
+   
    .footer.php
+   
    .header.php
 
-A pasta index.php ficara fora de todos as pastas 
+  A pasta index.php ficara fora de todos as pastas 
 
    10.Passo_Agora vamos fazer as codificações para o nosso Projeto
  
@@ -92,55 +106,86 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
    CODIGO:
   
   <?php
-   include("../models/conexao.php");
-   mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
-   header("location:../");
-   ?>
+   
+ include("../models/conexao.php");
+ 
+  mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
+  
+ header("location:../");
+ 
+  ?>
   
   cadastroAtualoza.php :  
-   Ele cadastra o usuario dentro do banco de dados 
+  
+  Ele cadastra o usuario dentro do banco de dados 
    
    CODIGO:
 
 <?php
-  include("../models/conexao.php");
+  
+include("../models/conexao.php");
+
  mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
-  header("location:../");
-  ?>
+ 
+ header("location:../");
+ 
+ ?>
  
  deletarAluno.php:
  
  Ele deleta a seu cadastro dentro do banco
 
 CODIGO:
-    <?php
-    include("../models/conexao.php");
-    mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
-    header("location:../");
-    ?>
+  
+  <?php
+  
+  include("../models/conexao.php");
+  
+  mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
+  
+  header("location:../");
+  
+  ?>
 
 funcoes.php:
   
   A função serve para fazer as buscas entre as pastas 
  
  CODIGO:
-   <?php
+ 
+ <?php
+
 function mostrarDados()
+
 {
+
     include("models/conexao.php");
-    if (empty($_POST["buscar"])) {
-        echo "Nenhum resultado";
-    } else {
-        $varBusca = $_POST["buscar"];
-        echo "<table class='table table-bordered table-striped table-hover' border='1' width='450'><tr><td>Frase</td><td>Editar</td><td>Excluir</td></tr>";
-        $query = mysqli_query($conexao, "SELECT * FROM alunos WHERE nome LIKE '%$varBusca%'");
-        while ($exibe = mysqli_fetch_array($query)) {
-            $varSexo = ($exibe[3] == "m") ? "o" : "a";
-            echo "<tr>" .
-                "<td>" . strtoupper($varSexo) . " alun$varSexo <b>" . $exibe[1] . "</b> mora na cidade de " . $exibe[2] . ".</td>" .
-                "<td><a href='views/cadastroAtualiza.php?ida=" . $exibe[0] . "'><buttom type='button' class='btn btn-secondary'>Editar</button></a></td>" .
-                "<td><a href='controllers/deletarAluno.php?ida=" . $exibe[0] . "'><button type='button' class='btn btn-danger'>Excluir</button></a></td>" .
-                "</tr>";
+    
+if (empty($_POST["buscar"])) {
+
+	echo "Nenhum resultado";
+    
+} else {
+
+	$varBusca = $_POST["buscar"];
+        
+echo "<table class='table table-bordered table-striped table-hover' border='1' width='450'><tr><td>Frase</td><td>Editar</td><td>Excluir</td></tr>";
+
+	$query = mysqli_query($conexao, "SELECT * FROM alunos WHERE nome LIKE '%$varBusca%'");
+        
+while ($exibe = mysqli_fetch_array($query)) {
+
+	    $varSexo = ($exibe[3] == "m") ? "o" : "a";
+            
+echo "<tr>" .
+
+		"<td>" . strtoupper($varSexo) . " alun$varSexo <b>" . $exibe[1] . "</b> mora na cidade de " . $exibe[2] . ".</td>" .
+                
+"<td><a href='views/cadastroAtualiza.php?ida=" . $exibe[0] . "'><buttom type='button' class='btn btn-secondary'>Editar</button></a></td>" .
+
+		"<td><a href='controllers/deletarAluno.php?ida=" . $exibe[0] . "'><button type='button' class='btn btn-danger'>Excluir</button></a></td>" .
+                
+"</tr>";
         }
 
         echo "</table>";
