@@ -172,7 +172,7 @@ Fora do blades
     
 cadastro.php	
 
-Ela contem bootstrap e onde aparce o seu design do cadastro 
+Ela contem bootstrap e onde irá aparecer o seu design do cadastro 
 
 CODIGO:
 
