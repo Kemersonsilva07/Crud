@@ -27,7 +27,7 @@ Aprenda os passo a passo para criar o seu primeiro banco Crud:
     
    ![Visual](https://user-images.githubusercontent.com/128431256/228089947-1202e57c-87a4-4500-8f21-0a9e8350e883.png)
 
-   4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples):
+   4.Passo_instale o bootstrap(fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples)
      <https://getbootstrap.com/>
      
    ![boot](https://user-images.githubusercontent.com/128431256/228089994-654df66a-beb0-4bde-9413-01f7527edbb1.png);
