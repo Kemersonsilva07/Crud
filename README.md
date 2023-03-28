@@ -100,6 +100,7 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
  Controller:
  
  atualizarAluno.php
+
 O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
    
   CODIGO:
@@ -147,8 +148,10 @@ CODIGO:
   
    Blades
   
-  footer.php
-     Ele é onde fecha o seu codigo
+ footer.php
+ 
+ Ele é onde fecha o seu codigo
+ 
  CODIGO:
 
 ![foot](https://user-images.githubusercontent.com/128431256/228100090-866f8c70-4ec1-45be-86c5-cdccef1edb43.png)
@@ -162,6 +165,7 @@ header é onde fica o seu cabeçalho
 Fora do blades 
     
 cadastro.php	
+
 Ela contem bootstrap e onde aparce o seu design do cadastro 
 
 CODIGO:
