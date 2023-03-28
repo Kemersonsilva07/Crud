@@ -100,7 +100,6 @@ Após a instalação dos aplicativos necessarios para a criação do seu projeto
  Controller:
  
  atualizarAluno.php
-
 O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco de dados assim podendo fazer um novo cadastro
    CODIGO:
   <?php
@@ -110,7 +109,6 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
   ?>
   
   cadastroAtualoza.php :  
-  
   Ele cadastra o usuario dentro do banco de dados 
     CODIGO:
 <?php
@@ -118,8 +116,7 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
 header("location:../");
 ?>
  
- deletarAluno.php:
- 
+ deletarAluno.php: 
  Ele deleta a seu cadastro dentro do banco
 CODIGO:
    <?php
@@ -130,7 +127,6 @@ CODIGO:
 
 funcoes.php:
     A função serve para fazer as buscas entre as pastas 
- 
  CODIGO:
  <?php
 function mostrarDados()
@@ -186,7 +182,6 @@ $conexao = mysqli_connect("127.0.0.1","root","");
   
   footer.php
      Ele é onde fecha o seu codigo
- 
  CODIGO:
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
@@ -210,9 +205,7 @@ CODIGO:
 Fora do blades 
     
 cadastro.php	
-
-Ela contem bootstrap e onde aparce o seu design do cadastro
-   
+Ela contem bootstrap e onde aparce o seu design do cadastro 
 CODIGO:
   <?php include("blades/header.php") ?>
 
