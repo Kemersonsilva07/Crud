@@ -204,7 +204,8 @@ Agora q seu projeto esta pronto vamos testar.Para isso você ira na sua platafor
    
    ![Captura de tela 2023-03-27 221250](https://user-images.githubusercontent.com/128431256/228101261-e4515da0-06d4-412e-bd4c-f2f7e4605632.png)
    
-   E sua tela final estara assim
+   Parábens você fez o seu primeiro Banco Crud.
+   E seu banco ficará assim
    
    ![FIAN](https://user-images.githubusercontent.com/128431256/228101319-8715ff01-cc8c-4f76-99ac-6515f5734528.png)
 
