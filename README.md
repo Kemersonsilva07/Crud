@@ -108,11 +108,8 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
   <?php
    
  include("../models/conexao.php");
- 
- mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
-  
- header("location:../");
- 
+  mysqli_query($conexao, "UPDATE alunos SET nome='".$_POST["alunoNome"]."', cidade='".$_POST["alunoCidade"]."', sexo='".$_POST["alunoSexo"]."' WHERE codigo = ".$_POST["alunoCodigo"]);
+   header("location:../"); 
   ?>
   
   cadastroAtualoza.php :  
@@ -121,26 +118,20 @@ O arquivo atualizarAluno serve para o usuario Atualizar o seu cadastro no banco 
    
    CODIGO:
 <?php
-  
-include("../models/conexao.php");
- mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
- header("location:../");
- ?>
+  include("../models/conexao.php"); mysqli_query($conexao, "INSERT INTO alunos (nome, cidade, sexo) VALUES ('".$_POST["alunoNome"]."', '".$_POST["alunoCidade"]."', '".$_POST["alunoSexo"]."')");
+header("location:../");
+?>
  
  deletarAluno.php:
  
  Ele deleta a seu cadastro dentro do banco
 
 CODIGO:
-  
-  <?php
-  
-  include("../models/conexao.php");
-  
-  mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
-  
-  header("location:../");
-  
+   
+   <?php
+   include("../models/conexao.php");
+   mysqli_query($conexao,"DELETE FROM alunos WHERE codigo = ".$_GET["ida"]);
+   header("location:../");
   ?>
 
 funcoes.php:
@@ -150,15 +141,10 @@ funcoes.php:
  CODIGO:
  
  <?php
-
 function mostrarDados()
-
 {
-
-    include("models/conexao.php");
-    
-if (empty($_POST["buscar"])) {
-
+  include("models/conexao.php");
+    if (empty($_POST["buscar"])) {
 	echo "Nenhum resultado";
     
 } else {
