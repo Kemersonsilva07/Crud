@@ -199,7 +199,7 @@ Agora q seu projeto esta pronto vamos testar.Para isso você ira na sua platafor
    
    Parábens você fez o seu primeiro Banco Crud!!!
    
-   Agora vou mostrar vou mostrar o resultado do seu trablho
+   Agora vou mostrar o resultado do seu trablho
    
    ![FIAN](https://user-images.githubusercontent.com/128431256/228101319-8715ff01-cc8c-4f76-99ac-6515f5734528.png)
 
