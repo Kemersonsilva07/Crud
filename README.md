@@ -1,6 +1,6 @@
 
 # Crud
-Aprenda os passo a passo para criar o seu primeiro banco Crud:
+Aprenda os passos para criar o seu primeiro banco Crud:
 
  Olá, hoje vou mostrar para vocês como criar o seu primeiro Banco Crud no visual code
      Entretanto vou explicar a você o que é Crud:
